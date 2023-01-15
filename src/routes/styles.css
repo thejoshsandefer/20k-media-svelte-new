@@ -1,39 +1,70 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--font-body: Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
-		Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+	--body-font-family: 'Catamaran', sans-serif;
+	--heading-font-family: 'Kumbh Sans', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
-	--color-bg-0: rgb(202, 216, 228);
-	--color-bg-1: hsl(209, 36%, 86%);
-	--color-bg-2: hsl(224, 44%, 95%);
-	--color-theme-1: #ff3e00;
-	--color-theme-2: #4075a6;
-	--color-text: rgba(0, 0, 0, 0.7);
+	--content-width: 1280px;
+
+	/* Colors */
+	--white: #f3f3f3;
+	--off-white: #adadb8;
+	--black: #120321;
+	--black-alt: black;
+	--gold: #ffcc00;
+	--purple-light: #7a00cb;
+	--purple-dark: #3e0068;
+	--red: #ff0066;
+	--green: #66ff00;
+
 	--column-width: 42rem;
 	--column-margin-top: 4rem;
 	font-family: var(--font-body);
 	color: var(--color-text);
+	--header-height: 6rem;
+
+	/* Weights */
+	--regular: 400;
+	--semi-bold: 600;
+	--bold: 700;
+
+	/* Fonts */
+	--h1: 4.209rem;
+	--h2: 3.157rem;
+	--h3: 2.369rem;
+	--h4: 1.777rem;
+	--h5: 1.333rem;
+	--h6: 1rem;
+	--body-font-size: 1rem;
+	--body-font-small: 0.75rem;
 }
 
 body {
 	min-height: 100vh;
 	margin: 0;
-	background-attachment: fixed;
-	background-color: var(--color-bg-1);
-	background-size: 100vw 100vh;
-	background-image: radial-gradient(
-			50% 50% at 50% 50%,
-			rgba(255, 255, 255, 0.75) 0%,
-			rgba(255, 255, 255, 0) 100%
-		),
-		linear-gradient(180deg, var(--color-bg-0) 0%, var(--color-bg-1) 15%, var(--color-bg-2) 50%);
+}
+
+main {
+}
+
+section {
+	background-color: transparent;
 }
 
 h1,
+.h1,
 h2,
-p {
-	font-weight: 400;
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: var(--heading-font-family);
+	font-weight: var(--bold);
 }
 
 p {
@@ -47,15 +78,6 @@ a {
 
 a:hover {
 	text-decoration: underline;
-}
-
-h1 {
-	font-size: 2rem;
-	text-align: center;
-}
-
-h2 {
-	font-size: 1rem;
 }
 
 pre {
@@ -89,8 +111,36 @@ button:focus:not(:focus-visible) {
 }
 
 @media (min-width: 720px) {
-	h1 {
-		font-size: 2.4rem;
+	h1,
+	.h1 {
+		font-size: var(--h1);
+		text-transform: uppercase;
+	}
+
+	h2,
+	.h2 {
+		font-size: var(--h2);
+		text-transform: uppercase;
+	}
+
+	h3,
+	.h3 {
+		font-size: var(--h3);
+	}
+
+	h4,
+	.h4 {
+		font-size: var(--h4);
+	}
+
+	h5,
+	.h5 {
+		font-size: var(--h5);
+	}
+
+	h6,
+	.h6 {
+		font-size: var(--h6);
 	}
 }
 
