@@ -17,17 +17,17 @@
 					</p>
 				</li>
 				<li>
-					<h3 class="h5">Web Design</h3>
+					<h3 class="h5">Web Development</h3>
 					<p>
-						Websites are the first impression of your business. Make it count with a website that
-						tells your brand's story.
+						Our unique process delivers you a fast, unique website that is a joy for your visitors
+						to use.
 					</p>
 				</li>
 				<li>
-					<h3 class="h5">Web Design</h3>
+					<h3 class="h5">Optimize</h3>
 					<p>
-						Websites are the first impression of your business. Make it count with a website that
-						tells your brand's story.
+						Optimize your site to be found by search engines to help attract more ideal clients to
+						your business.
 					</p>
 				</li>
 			</ul>
