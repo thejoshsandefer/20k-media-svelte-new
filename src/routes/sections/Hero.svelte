@@ -108,13 +108,14 @@
 	section {
 		height: 50vh;
 		margin-top: calc(0px - var(--header-height));
-		padding: calc(var(--header-height) + 4rem) 1rem calc(var(--header-height) + 2rem) 1rem;
+		padding: calc(var(--header-height) + 4rem) 1rem calc(var(--header-height) - 2rem) 1rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		color: var(--white);
 		position: relative;
 		background-color: var(--black);
+		background-image: url('https://20k.media/wp-content/uploads/2023/01/ooorganize-1.svg');
 		overflow: hidden;
 	}
 	.container-inner {
@@ -122,7 +123,6 @@
 		width: var(--content-width);
 	}
 	.content {
-		/* margin-right: -20rem; */
 		max-width: 50rem;
 		z-index: 1;
 		display: flex;

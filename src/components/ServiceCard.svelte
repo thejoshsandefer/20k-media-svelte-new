@@ -8,7 +8,7 @@
 <div class="container">
 	<slot />
 	<h3>{serviceName}</h3>
-	<a href={buttonLink}>Learn More</a>
+	<!-- <a href={buttonLink}>Learn More</a> -->
 </div>
 
 <style>
@@ -24,6 +24,11 @@
 		align-items: center;
 		color: var(--black);
 		margin: 1rem;
+		transition: box-shadow 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+	}
+	.container:hover {
+		box-shadow: 0px 5px 30px 0px var(--off-white);
+		cursor: pointer;
 	}
 	h3 {
 		font-size: 22px;
