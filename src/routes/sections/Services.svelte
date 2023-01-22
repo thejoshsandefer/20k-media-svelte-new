@@ -2,6 +2,7 @@
 	import RadialGradient from '../../components/RadialGradient.svelte';
 	import ServiceCard from '../../components/ServiceCard.svelte';
 	import Title from '../../components/Title.svelte';
+	import Image from 'svimg';
 </script>
 
 <section>
@@ -24,6 +25,7 @@
 					<img
 						src="https://20k.media/wp-content/uploads/2023/01/nirmal-rajendharkumar-1lGeOg6IULc-unsplash-1-scaled.jpg"
 						alt=""
+						loading="lazy"
 					/>
 				</div>
 				<div class="row">

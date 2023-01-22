@@ -8,7 +8,7 @@
 <div class="testimonial-wrapper">
 	<div class="inner-container">
 		<p class="testimonial">{testimonial}</p>
-		<img src={image} alt="" />
+		<img src={image} alt="" loading="lazy" />
 		<p class="name">{personName} ({title})</p>
 	</div>
 </div>
