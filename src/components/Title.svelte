@@ -23,6 +23,8 @@
 		justify-content: center;
 		gap: 0.5rem;
 		color: var(--red);
+		position: relative;
+		z-index: 1000;
 	}
 	svg {
 		width: 20px;

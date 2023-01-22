@@ -1,14 +1,14 @@
 @import '@fontsource/fira-mono';
 
 :root {
-	--body-font-family: 'Catamaran', sans-serif;
-	--heading-font-family: 'Kumbh Sans', sans-serif;
+	--body-font-family: 'Roboto', sans-serif;
+	--heading-font-family: 'Poppins', sans-serif;
 	--font-mono: 'Fira Mono', monospace;
 	--content-width: 1280px;
 
 	/* Colors */
-	--white: #f3f3f3;
-	--off-white: #adadb8;
+	--white: #ffffff;
+	--off-white: #e3e2e0;
 	--black: #120321;
 	--black-alt: black;
 	--gold: #ffcc00;
@@ -25,6 +25,7 @@
 
 	/* Weights */
 	--regular: 400;
+	--medium: 500;
 	--semi-bold: 600;
 	--bold: 700;
 
@@ -114,13 +115,11 @@ button:focus:not(:focus-visible) {
 	h1,
 	.h1 {
 		font-size: var(--h1);
-		text-transform: uppercase;
 	}
 
 	h2,
 	.h2 {
 		font-size: var(--h2);
-		text-transform: uppercase;
 	}
 
 	h3,
@@ -236,4 +235,35 @@ button:focus:not(:focus-visible) {
 }
 .btn.btn-secondary::after {
 	background-color: var(--red);
+}
+
+.peekaboo {
+	position: relative;
+}
+.peekaboo::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border-radius: 20px;
+	background-image: linear-gradient(
+		45deg,
+		hsl(336deg 100% 50%) 1%,
+		hsl(333deg 100% 49%) 43%,
+		hsl(330deg 100% 48%) 50%,
+		hsl(326deg 100% 46%) 51%,
+		hsl(321deg 100% 44%) 51%,
+		hsl(315deg 100% 41%) 49%,
+		hsl(308deg 100% 38%) 49%,
+		hsl(298deg 100% 36%) 50%,
+		hsl(287deg 100% 38%) 57%,
+		hsl(276deg 100% 40%) 99%
+	);
+	z-index: -1;
+	transition: transform 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+}
+.peekaboo:hover::before {
+	transform: rotate(8deg);
 }

@@ -3,88 +3,6 @@
 </script>
 
 <section>
-	<div class="radial-gradient-lg">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			version="1.1"
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			xmlns:svgjs="http://svgjs.dev/svgjs"
-			viewBox="0 0 800 800"
-			opacity="1"
-			><defs
-				><filter
-					id="bbblurry-filter"
-					x="-100%"
-					y="-100%"
-					width="400%"
-					height="400%"
-					filterUnits="objectBoundingBox"
-					primitiveUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
-				>
-					<feGaussianBlur
-						stdDeviation="130"
-						x="0%"
-						y="0%"
-						width="100%"
-						height="100%"
-						in="SourceGraphic"
-						edgeMode="none"
-						result="blur"
-					/></filter
-				></defs
-			><g filter="url(#bbblurry-filter)"
-				><ellipse
-					rx="150"
-					ry="150"
-					cx="408.87360130429875"
-					cy="370.080173352626"
-					fill="#3e0068"
-				/></g
-			></svg
-		>
-	</div>
-	<div class="radial-gradient-sm">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			version="1.1"
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			xmlns:svgjs="http://svgjs.dev/svgjs"
-			viewBox="0 0 800 800"
-			opacity="1"
-			><defs
-				><filter
-					id="bbblurry-filter"
-					x="-100%"
-					y="-100%"
-					width="400%"
-					height="400%"
-					filterUnits="objectBoundingBox"
-					primitiveUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
-				>
-					<feGaussianBlur
-						stdDeviation="130"
-						x="0%"
-						y="0%"
-						width="100%"
-						height="100%"
-						in="SourceGraphic"
-						edgeMode="none"
-						result="blur"
-					/></filter
-				></defs
-			><g filter="url(#bbblurry-filter)"
-				><ellipse
-					rx="150"
-					ry="150"
-					cx="408.87360130429875"
-					cy="370.080173352626"
-					fill="#3e0068"
-				/></g
-			></svg
-		>
-	</div>
 	<div class="container-inner">
 		<div class="content">
 			<h1 class="page-title">Make your business turn heads.</h1>
@@ -98,9 +16,7 @@
 				<Button buttonText={'Learn More'} buttonLink="#" buttonType="secondary" />
 			</div>
 		</div>
-		<div class="image">
-			<!-- <img src="https://20k.media/wp-content/uploads/2022/11/SEO.jpg" alt="" /> -->
-		</div>
+		<i class="icon-down-open-big" />
 	</div>
 </section>
 
@@ -108,19 +24,38 @@
 	section {
 		height: 50vh;
 		margin-top: calc(0px - var(--header-height));
-		padding: calc(var(--header-height) + 4rem) 1rem calc(var(--header-height) - 2rem) 1rem;
+		padding: calc(var(--header-height) + 4rem) 5% calc(var(--header-height) + 2rem) 5%;
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		color: var(--white);
-		position: relative;
-		background-color: var(--black);
-		background-image: url('https://20k.media/wp-content/uploads/2023/01/ooorganize-1.svg');
-		overflow: hidden;
+	}
+	i::before {
+		font-size: 1.5rem;
+		padding: 1rem;
+		background-color: var(--white);
+		border-radius: 50%;
+		position: absolute;
+		bottom: -1.5rem;
+		left: calc(50% - 1.5rem);
+		transition: color 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+		color: var(--black);
+		z-index: 1;
+	}
+	i:hover::before {
+		cursor: pointer;
+		background-color: var(--red);
 	}
 	.container-inner {
+		background-color: var(--off-white);
 		display: flex;
+		justify-content: center;
 		width: var(--content-width);
+		min-height: 60vh;
+		border-radius: 20px;
+		position: relative;
+		background-image: url(/grid-05.png);
+		background-size: cover;
+		color: var(--white);
 	}
 	.content {
 		max-width: 50rem;
@@ -128,18 +63,21 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 	}
 	.page-title {
 		margin: 0;
 		line-height: 1em;
 		margin-bottom: 1.5rem;
+		text-align: center;
+		/* text-shadow: 2px 2px 20px var(--purple-light); */
 	}
 	.page-subtitle {
 		margin: 0;
 		margin-bottom: 2rem;
 		text-transform: none;
-		margin-right: 150px;
 		font-weight: var(--regular);
+		text-align: center;
 	}
 	.button-left {
 		margin-right: 1rem;

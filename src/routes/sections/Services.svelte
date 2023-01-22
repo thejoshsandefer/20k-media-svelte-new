@@ -6,7 +6,8 @@
 
 <section>
 	<div class="inner-container">
-		<h2 class="section-title">What We Offer</h2>
+		<Title titleText="Services" />
+		<h2 class="section-title">What We Do</h2>
 		<div class="col-container">
 			<div class="col col-1">
 				<div class="left-margin">
@@ -48,63 +49,16 @@
 			</div>
 		</div>
 	</div>
-	<div class="radial-gradient-container">
-		<RadialGradient gradientColor="var(--red)" />
-	</div>
-	<div class="radial-gradient-right">
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			version="1.1"
-			xmlns:xlink="http://www.w3.org/1999/xlink"
-			xmlns:svgjs="http://svgjs.dev/svgjs"
-			viewBox="0 0 800 800"
-			opacity="1"
-			><defs
-				><filter
-					id="bbblurry-filter"
-					x="-100%"
-					y="-100%"
-					width="400%"
-					height="400%"
-					filterUnits="objectBoundingBox"
-					primitiveUnits="userSpaceOnUse"
-					color-interpolation-filters="sRGB"
-				>
-					<feGaussianBlur
-						stdDeviation="130"
-						x="0%"
-						y="0%"
-						width="100%"
-						height="100%"
-						in="SourceGraphic"
-						edgeMode="none"
-						result="blur"
-					/></filter
-				></defs
-			><g filter="url(#bbblurry-filter)"
-				><ellipse
-					rx="150"
-					ry="150"
-					cx="408.87360130429875"
-					cy="370.080173352626"
-					fill="#7a00cb"
-				/></g
-			></svg
-		>
-	</div>
 </section>
 
 <style>
 	section {
-		padding: 5rem 1rem 10rem 1rem;
-		background-color: var(--black);
+		padding: 5rem 5% 10rem 5%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		/* z-index: -1; */
 		position: relative;
 		overflow: hidden;
-		background-image: url('https://20k.media/wp-content/uploads/2023/01/ooorganize-1.svg');
 	}
 	.inner-container {
 		z-index: 10;
@@ -114,7 +68,7 @@
 		font-size: 4rem;
 	}
 	.section-title {
-		color: var(--white);
+		/* color: var(--white); */
 		text-align: center;
 		margin: 1rem 0 2rem 0;
 	}
@@ -155,18 +109,19 @@
 		height: 560px;
 		object-fit: cover;
 		border-radius: 200px;
+		animation: float 4s ease-in-out infinite;
+		border: 1px solid var(--purple-dark);
+		box-shadow: 4px 4px 10px 0 rgba(0, 0, 0, 0.5);
 	}
-	svg {
-		color: var(--red);
-		width: 4rem;
-		height: 4rem;
-	}
-	.radial-gradient-container {
-		--gradient-size: 500px;
-		bottom: calc(var(--gradient-size) / -2);
-		left: calc(var(--gradient-size) / -2);
-		width: var(--gradient-size);
-		height: var(--gradient-size);
-		position: absolute;
+	@keyframes float {
+		0% {
+			transform: translateY(15px);
+		}
+		50% {
+			transform: translateY(0px);
+		}
+		100% {
+			transform: translateY(15px);
+		}
 	}
 </style>

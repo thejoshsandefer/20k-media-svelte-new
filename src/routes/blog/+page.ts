@@ -1,4 +1,3 @@
-import { PUBLIC_WORDPRESS_API_URL } from '$env/static/public';
 export const prerender = true;
 const query = `
     query getPosts {
