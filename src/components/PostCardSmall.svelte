@@ -6,7 +6,11 @@
 <article>
 	{#if post.featuredImage}
 		<a href={`/blog${post.uri}`}>
-			<img src={post.featuredImage.node.sourceUrl} alt={post.featuredImage.node.altText} />
+			<img
+				src={post.featuredImage.node.sourceUrl}
+				alt={post.featuredImage.node.altText}
+				loading="lazy"
+			/>
 		</a>
 	{/if}
 	<div class="content">
